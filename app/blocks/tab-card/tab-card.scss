@@ -1,0 +1,57 @@
+.tab-card {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 29px 40px 30px 25px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+
+    &__icon-block {
+        width: 45px;
+        height: 45px;
+        margin-right: 20px;
+    }
+
+    &__icon {
+        transition: fill 0.3s ease-out;
+        fill: $disabled-element-color;
+    }
+
+    &__info {
+
+        @media screen and (max-width: 480px) {
+            flex: 1 0 auto;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        color: $text-color;
+        margin-bottom: 7px;
+    }
+
+    &__text {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        color: $second-text-color;
+    }
+
+    &_active,
+    &:hover {
+        background: #ffffff;
+        border: 1px solid #f1f1f1;
+        box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+    }
+
+    &_active &__icon,
+    &:hover &__icon {
+        fill: $primary-color;
+    }
+}

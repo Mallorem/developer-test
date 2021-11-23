@@ -1,0 +1,14 @@
+.search {
+    width: 126px;
+
+    &__field {
+        height: 22px;
+        background-color: transparent;
+        border: none;
+        background-image: url("../images/search.svg");
+        background-repeat: no-repeat;
+        background-position: right 20px center;
+        max-width: 100%;
+        padding-right: 50px;
+    }
+}

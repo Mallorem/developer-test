@@ -1,0 +1,121 @@
+.menu {
+    @media screen and (max-width: 768px) {
+        order: 3;
+        height: 16px;
+        width: 28px;
+        margin-left: 12px;
+    }
+
+    &__list {
+        display: flex;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+            margin-top: 30px;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 35px;
+
+            @media screen and (max-width: 768px) {
+                margin-right: 0;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__link {
+        color: $mute-text-color;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        text-decoration: none;
+        transition: color 0.4s ease-out;
+
+        &_active, &:hover {
+            color: $light-text-color;
+
+            @media screen and (max-width: 768px) {
+                color: $primary-color;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            color: $light-text-color;
+            font-size: 24px;
+        }
+    }
+
+    &__body {
+        z-index: 4;
+
+        @media screen and (max-width: 768px) {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: $mute-text-color, $alpha: 0.9);
+            padding: 110px 30px 30px 30px;
+            transition: left 0.3s ease 0s;
+            overflow: auto;
+
+            &_active {
+                left: 0;
+
+                &::before {
+                    content: "";
+                    position: fixed;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    height: 90px;
+                    background-color: $light-text-color;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        display: none;
+
+        svg {
+            transition: fill 0.3s ease-out;
+            fill: $mute-text-color;
+        }
+
+        &:hover {
+
+            svg {
+                fill: $primary-color;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            z-index: 5;
+            display: block;
+            position: relative;
+            width: 28px;
+            height: 16px;
+            cursor: pointer;
+            margin-left: auto;
+            font-size: 18px;
+            line-height: 19px;
+        }
+    }
+}

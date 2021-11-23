@@ -1,0 +1,14 @@
+.tab-body {
+    background-color: #fff;
+
+    &__title {
+        height: 106px;
+        border-bottom: 1px solid #eef0f6;
+        padding: 44px 0 38px 40px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        color: $text-color;
+    }
+}

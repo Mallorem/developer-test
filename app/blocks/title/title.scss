@@ -1,0 +1,12 @@
+.title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: $text-color;
+
+    &_light {
+        color: $light-text-color;
+    }
+}

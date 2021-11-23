@@ -1,0 +1,45 @@
+.tabs {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    &__nav {
+        flex: 0 1 332px;
+
+        @media screen and (max-width: 768px) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__block {
+        display: none;
+
+        &_active {
+            display: block;
+        }
+    }
+
+    &__items {
+        @media screen and (max-width: 992px) {
+            margin-right: 30px;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-right: 0;
+        }
+    }
+
+    &__body {
+        flex: 0 1 57%;
+        max-width: 600px;
+
+        @media screen and (max-width: 768px) {
+            margin-top: 24px;
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+    }
+}

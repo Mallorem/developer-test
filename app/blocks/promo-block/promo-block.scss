@@ -1,0 +1,49 @@
+.promo-block {
+    background: linear-gradient(0deg, rgba(23, 23, 23, 0.5), rgba(23, 23, 23, 0.5)),
+        url("../images/promo__background.jpg");
+    background-position: center center;
+    background-size: cover;
+    padding: 180px 0 253px 60px;
+    text-align: center;
+
+    @media screen and (max-width: 992px) {
+        padding-left: 0;
+        background-position: 80% 50%;
+    }
+
+    &__signature {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        color: $light-text-color;
+    }
+
+    &__title {
+        margin-top: 14px;
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: 58px;
+        line-height: 80px;
+        letter-spacing: 0.2px;
+        color: $light-text-color;
+
+        @media screen and (max-width: 768px) {
+            font-size: 40px;
+            line-height: 57px;
+        }
+    }
+
+    &__text {
+        margin-top: 11px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 40px;
+        letter-spacing: 0.2px;
+        color: $light-text-color;
+
+        @media screen and (max-width: 768px) {
+            margin-top: 30px;
+        }
+    }
+}

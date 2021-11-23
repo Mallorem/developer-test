@@ -1,0 +1,22 @@
+.sources-graph {
+    &__content {
+        display: flex;
+        padding: 45px 17px 30px 34px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__img {
+        width: 100%;
+        height: 285px;
+        background-image: url("../images/graph__source.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @media screen and (max-width: 992px) {
+            background-image: url("../images/graph__source_mobile.png");
+            height: 473px;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.statistic {
+    background-color: #015e84;
+    border-top-left-radius: 326px;
+    padding-top: 88px;
+    position: relative;
+
+    &__title {
+        position: relative;
+        z-index: 4;
+    }
+
+    &__content {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
+
+    &__blocks {
+        flex: 0 1 40%;
+        margin-top: 51px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        position: relative;
+        z-index: 4;
+
+        @media screen and (max-width: 992px) {
+            flex: 0 1 100%;
+        }
+    }
+
+    &__blocks-item {
+        flex: 0 1 185px;
+        text-align: center;
+        margin-bottom: 97px;
+
+        @media screen and (max-width: 992px) {
+            flex: 0 1 50%;
+        }
+
+        @media screen and (max-width: 992px) {
+            flex: 0 1 100%;
+        }
+    }
+
+    &__photo {
+        flex: 0 1 50%;
+        border-radius: 600px 600px 0px 0px;
+        max-width: 540px;
+        height: 643px;
+        object-fit: cover;
+        object-position: 80% 50%;
+
+        @media screen and (max-width: 992px) {
+            object-position: 90% 50%;
+            object-fit: cover;
+            width: 100%;
+            max-width: 100%;
+            max-height: 400px;
+        }
+
+        @media screen and (max-width: 768px) {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            height: 100%;
+            max-height: 100%;
+            border-radius: 0;
+            border-top-left-radius: 155px;
+            object-position: 1% 50%;
+            object-fit: cover;
+        }
+    }
+
+    &__icon-block {
+        width: auto;
+        height: 85px;
+    }
+
+    &__num {
+        font-weight: 500;
+        font-size: 58px;
+        line-height: 80px;
+        letter-spacing: 0.2px;
+        color: $light-text-color;
+    }
+
+    &__name {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        color: $light-text-color;
+    }
+}
